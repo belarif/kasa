@@ -1,4 +1,4 @@
-nav {
+.header-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,17 +8,17 @@ nav {
     flex-direction: row;
     margin: 0;
     padding: 0;
-  }
 
-  li {
-    display: block;
-    padding: 42px 0;
-  }
+    li {
+      display: block;
+      padding: 42px 0;
 
-  a {
-    border-top: 3px solid transparent;
-    padding: 40px 30px;
-    text-decoration: none;
-    color: $orange;
+      a {
+        border-top: 3px solid transparent;
+        padding: 40px 30px;
+        text-decoration: none;
+        color: $orange;
+      }
+    }
   }
 }

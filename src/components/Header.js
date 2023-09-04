@@ -3,14 +3,16 @@ import "../sass/main.scss";
 
 function Header() {
   return (
-    <nav>
-      <img src={logo} alt="Kasa" title="" />
+    <nav className="header-navbar">
+      <a href="#">
+        <img src={logo} alt="logo Kasa" title="logo" />
+      </a>
       <ul>
         <li>
           <a href="#accueil">Accueil</a>
         </li>
         <li>
-          <a href="#a-propos">A propos</a>
+          <a href="#a_propos">A propos</a>
         </li>
       </ul>
     </nav>
