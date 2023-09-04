@@ -1,0 +1,36 @@
+:root {
+  --orange: #ff6060;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+li {
+  display: block;
+}
+
+nav li {
+  padding: 42px 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--orange);
+}
+
+nav a {
+  border-top: 3px solid transparent;
+  padding: 40px 30px;
+}
