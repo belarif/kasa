@@ -1,10 +1,9 @@
 import logo from "../assets/logo.png";
-import "../sass/main.scss";
 
-function Header() {
+const Header = () => {
   return (
     <nav className="header-navbar">
-      <a href="#">
+      <a href="/">
         <img src={logo} alt="logo Kasa" title="logo" />
       </a>
       <ul>
@@ -17,6 +16,6 @@ function Header() {
       </ul>
     </nav>
   );
-}
+};
 
 export default Header;
