@@ -9,7 +9,7 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/a-propos" element={<Apropos />} />
+        <Route path="/aPropos" element={<Apropos />} />
       </Routes>
     </Router>
   </React.StrictMode>,

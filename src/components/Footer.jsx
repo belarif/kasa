@@ -1,11 +1,12 @@
 import logo from "../assets/logo-blanc.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
-      <a href="/">
+      <Link to="/">
         <img src={logo} alt="logo Kasa" title="logo" />
-      </a>
+      </Link>
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
   );
