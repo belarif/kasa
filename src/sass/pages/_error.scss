@@ -1,0 +1,21 @@
+.error-message {
+  padding: 160px 0;
+  color: $orange;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 186px;
+  }
+
+  p {
+    margin-bottom: 160px;
+    font-size: 36px;
+  }
+
+  a {
+    padding: 180px 0 60px 0;
+    color: $orange;
+    font-size: 22px;
+  }
+}
