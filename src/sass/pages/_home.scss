@@ -1,8 +1,24 @@
 .banner {
+  position: relative;
+  width: 100%;
+
+  h1 {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    margin: 0;
+    text-align: center;
+    width: inherit;
+    color: $white;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
   img {
     border-radius: 30px;
-    width: 100%;
+    width: inherit;
     height: 223px;
     object-fit: cover;
+    filter: brightness(0.7);
   }
 }

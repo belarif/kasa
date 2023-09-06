@@ -10,7 +10,11 @@ const Home = () => {
     <React.Fragment>
       <Header />
       <main>
-        <Banner src={homeBanner} alt="bannière accueil"></Banner>
+        <Banner
+          src={homeBanner}
+          alt="bannière accueil"
+          title="Chez vous, partout et ailleurs"
+        ></Banner>
       </main>
       <Footer />
     </React.Fragment>
