@@ -9,13 +9,11 @@ const Home = () => {
   return (
     <React.Fragment>
       <Header />
-      <main>
-        <Banner
-          src={homeBanner}
-          alt="bannière accueil"
-          title="Chez vous, partout et ailleurs"
-        ></Banner>
-      </main>
+      <Banner
+        src={homeBanner}
+        alt="bannière accueil"
+        title="Chez vous, partout et ailleurs"
+      ></Banner>
       <Footer />
     </React.Fragment>
   );

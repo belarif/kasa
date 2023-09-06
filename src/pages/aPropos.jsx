@@ -9,9 +9,7 @@ const Apropos = () => {
   return (
     <React.Fragment>
       <Header />
-      <main>
-        <Banner src={aporposBanner} alt="bannière à propos"></Banner>
-      </main>
+      <Banner src={aporposBanner} alt="bannière à propos"></Banner>
       <Footer />
     </React.Fragment>
   );
