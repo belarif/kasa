@@ -1,9 +1,7 @@
-import homeBanner from "../assets/home_banner.png";
-
-const Banner = () => {
+const Banner = ({ src, alt }) => {
   return (
     <div className="banner">
-      <img src={homeBanner} alt="image bannière" />
+      <img src={src} alt={alt} />
     </div>
   );
 };
