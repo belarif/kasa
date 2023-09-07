@@ -6,7 +6,10 @@ const Card = () => {
       <li>
         <Link to="/">
           <figure>
-            <img src="" alt="image1" />
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+              alt="image1"
+            />
             <figcaption>
               <h2>Titre de la location</h2>
             </figcaption>
@@ -17,7 +20,10 @@ const Card = () => {
       <li>
         <Link to="/">
           <figure>
-            <img src="" alt="image1" />
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+              alt="image1"
+            />
             <figcaption>
               <h2>Titre de la location</h2>
             </figcaption>
@@ -28,7 +34,10 @@ const Card = () => {
       <li>
         <Link to="/">
           <figure>
-            <img src="" alt="image1" />
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+              alt="image1"
+            />
             <figcaption>
               <h2>Titre de la location</h2>
             </figcaption>
@@ -39,7 +48,10 @@ const Card = () => {
       <li>
         <Link to="/">
           <figure>
-            <img src="" alt="image1" />
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+              alt="image1"
+            />
             <figcaption>
               <h2>Titre de la location</h2>
             </figcaption>
@@ -50,7 +62,10 @@ const Card = () => {
       <li>
         <Link to="/">
           <figure>
-            <img src="" alt="image1" />
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+              alt="image1"
+            />
             <figcaption>
               <h2>Titre de la location</h2>
             </figcaption>
@@ -61,7 +76,10 @@ const Card = () => {
       <li>
         <Link to="/">
           <figure>
-            <img src="" alt="image1" />
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+              alt="image1"
+            />
             <figcaption>
               <h2>Titre de la location</h2>
             </figcaption>
@@ -72,7 +90,10 @@ const Card = () => {
       <li>
         <Link to="/">
           <figure>
-            <img src="" alt="image1" />
+            <img
+              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+              alt="image1"
+            />
             <figcaption>
               <h2>Titre de la location</h2>
             </figcaption>
