@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Banner = ({ src, alt, title }) => {
   return (
     <header className="banner">
@@ -5,6 +7,12 @@ const Banner = ({ src, alt, title }) => {
       <img src={src} alt={alt} />
     </header>
   );
+};
+
+Banner.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Banner;
