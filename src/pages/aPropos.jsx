@@ -19,7 +19,7 @@ const Apropos = () => {
     <React.Fragment>
       <Header />
       <Banner src={aporposBanner} alt="bannière à propos"></Banner>
-      <main className="main-aPropos">
+      <main className="main_aPropos">
         {collapseNames.map((collapseName, index) => (
           <Collapse
             collapseName={collapseName}
