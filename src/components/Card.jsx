@@ -1,105 +1,22 @@
 import { Link } from "react-router-dom";
+import Logements from "../data/logements.json";
 
 const Card = () => {
   return (
     <ul>
-      <li>
-        <Link to="/">
-          <figure>
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
-              alt="image1"
-            />
-            <figcaption>
-              <h2>Titre de la location</h2>
-            </figcaption>
-          </figure>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="/">
-          <figure>
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
-              alt="image1"
-            />
-            <figcaption>
-              <h2>Titre de la location</h2>
-            </figcaption>
-          </figure>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="/">
-          <figure>
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
-              alt="image1"
-            />
-            <figcaption>
-              <h2>Titre de la location</h2>
-            </figcaption>
-          </figure>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="/">
-          <figure>
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
-              alt="image1"
-            />
-            <figcaption>
-              <h2>Titre de la location</h2>
-            </figcaption>
-          </figure>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="/">
-          <figure>
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
-              alt="image1"
-            />
-            <figcaption>
-              <h2>Titre de la location</h2>
-            </figcaption>
-          </figure>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="/">
-          <figure>
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
-              alt="image1"
-            />
-            <figcaption>
-              <h2>Titre de la location</h2>
-            </figcaption>
-          </figure>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="/">
-          <figure>
-            <img
-              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
-              alt="image1"
-            />
-            <figcaption>
-              <h2>Titre de la location</h2>
-            </figcaption>
-          </figure>
-        </Link>
-      </li>
+      {Logements &&
+        Logements.map((logement) => (
+          <li>
+            <Link to={"/housing/" + logement.id}>
+              <figure>
+                <img src={logement.cover} alt="image1" />
+                <figcaption>
+                  <h2>{logement.title}</h2>
+                </figcaption>
+              </figure>
+            </Link>
+          </li>
+        ))}
     </ul>
   );
 };

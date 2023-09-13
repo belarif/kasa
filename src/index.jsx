@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home";
 import Apropos from "./pages/aPropos";
 import Error from "./pages/error";
+import Housing from "./pages/housing";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/aPropos",
     element: <Apropos />,
+  },
+  {
+    path: "/housing/:housingId",
+    element: <Housing />,
   },
   {
     path: "*",
