@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
-import Logements from "../data/logements.json";
 
-const Card = () => {
+const Card = ({ housings }) => {
   return (
     <ul>
-      {Logements &&
-        Logements.map((logement) => (
-          <li>
-            <Link to={"/housing/" + logement.id}>
+      {housings &&
+        housings.map((housing) => (
+          <li key={housing.id}>
+            <Link to={"/housing/" + housing.id}>
               <figure>
-                <img src={logement.cover} alt="image1" />
+                <img src={housing.cover} alt={housing.title} />
                 <figcaption>
-                  <h2>{logement.title}</h2>
+                  <h2>{housing.title}</h2>
                 </figcaption>
               </figure>
             </Link>

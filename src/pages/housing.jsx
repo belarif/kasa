@@ -3,9 +3,9 @@ import "../sass/main.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import homeBanner from "../assets/home_banner.png";
-import Logo from "../assets/home_banner.png";
 import { FaRegStar } from "react-icons/fa";
 import Collapse from "../components/Collapse";
+import { useParams } from "react-router-dom";
 
 const Housing = () => {
   let collapseNames = ["Description", "Equipements"];
@@ -13,6 +13,9 @@ const Housing = () => {
     "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.",
     "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
   ];
+
+  let { id } = useParams();
+
   return (
     <React.Fragment>
       <Header />
@@ -23,12 +26,12 @@ const Housing = () => {
         <div className="housing_details">
           <div className="title_host">
             <div className="title">
-              <h1>Cosy loft on the canal</h1>
+              <h1>Cosy loft on the canal - {id} </h1>
               <p>Paris, ile-de-fraance</p>
             </div>
             <div className="host">
               <p>Alexandre Dumas</p>
-              <img src={Logo} alt="" />
+              <img src="" alt="" />
             </div>
           </div>
           <div className="tag_rate">

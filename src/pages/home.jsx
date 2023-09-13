@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../sass/main.scss";
 import homeBanner from "../assets/home_banner.png";
 import Header from "../components/Header";
@@ -7,6 +7,22 @@ import Banner from "../components/Banner";
 import Card from "../components/Card";
 
 const Home = () => {
+  const [housings, setHousings] = useState(null);
+
+  const getHousings = () => {
+    fetch("data/housings.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setHousings(data);
+      });
+  };
+
+  useEffect(() => {
+    getHousings();
+  }, []);
+
   return (
     <React.Fragment>
       <Header />
@@ -16,7 +32,7 @@ const Home = () => {
         title="Chez vous, partout et ailleurs"
       ></Banner>
       <main className="main-home">
-        <Card />
+        <Card housings={housings} />
       </main>
       <Footer />
     </React.Fragment>
