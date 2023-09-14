@@ -28,7 +28,9 @@ const Collapse = ({ collapseName, collapseText }) => {
         </span>
       </button>
       <ul className="collapse_text" style={{ display: "none" }}>
-        <li>{collapseText}</li>
+        {collapseText.map((text) => (
+          <li>{text}</li>
+        ))}
       </ul>
     </div>
   );
