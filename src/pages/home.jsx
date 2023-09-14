@@ -9,7 +9,7 @@ import Card from "../components/Card";
 const Home = () => {
   const [housings, setHousings] = useState(null);
 
-  const getHousings = () => {
+  useEffect(() => {
     fetch("data/housings.json")
       .then((res) => {
         return res.json();
@@ -17,10 +17,6 @@ const Home = () => {
       .then((data) => {
         setHousings(data);
       });
-  };
-
-  useEffect(() => {
-    getHousings();
   }, []);
 
   return (
