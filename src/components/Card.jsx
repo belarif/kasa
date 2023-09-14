@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ housings }) => {
   return (
-    <ul>
+    <ul className="card_list">
       {housings &&
         housings.map((housing) => (
           <li key={housing.id}>

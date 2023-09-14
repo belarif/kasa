@@ -13,9 +13,11 @@ const Collapse = ({ collapseName, collapseText }) => {
           <FaAngleUp />
         </span>
       </button>
-      <div className="collapse_text" style={{ display: "block" }}>
-        {collapseText}
-      </div>
+      <ul className="collapse_text" style={{ display: "block" }}>
+        {collapseText.map((text) => (
+          <li>{text}</li>
+        ))}
+      </ul>
     </div>
   ) : (
     <div className="collapse">
@@ -25,16 +27,16 @@ const Collapse = ({ collapseName, collapseText }) => {
           <FaAngleDown />
         </span>
       </button>
-      <div className="collapse_text" style={{ display: "none" }}>
-        {collapseText}
-      </div>
+      <ul className="collapse_text" style={{ display: "none" }}>
+        <li>{collapseText}</li>
+      </ul>
     </div>
   );
 };
 
 Collapse.propTypes = {
   collapseName: PropTypes.string,
-  collapseText: PropTypes.string,
+  collapseText: PropTypes.array,
 };
 
 export default Collapse;

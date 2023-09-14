@@ -8,7 +8,12 @@ body {
   }
 
   p,
-  a {
+  a,
+  li {
     font-size: 1.3rem;
+  }
+
+  li {
+    display: block;
   }
 }

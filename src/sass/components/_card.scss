@@ -1,4 +1,4 @@
-ul {
+.card_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
@@ -7,7 +7,6 @@ ul {
 
   li {
     position: relative;
-    display: block;
 
     figure {
       margin: 0;

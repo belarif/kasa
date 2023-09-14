@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../sass/main.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import homeBanner from "../assets/home_banner.png";
-import { FaRegStar } from "react-icons/fa";
 import Collapse from "../components/Collapse";
+import { FaRegStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 
 const Housing = () => {
-  let collapseNames = ["Description", "Equipements"];
-  let collapseTexts = [
-    "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.",
-    "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
-  ];
+  const { housingId } = useParams();
+  const [housing, setHousing] = useState(null);
 
-  let { id } = useParams();
+  useEffect(() => {
+    fetch("../data/housings.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        const housing = data.find((housing) => housing.id === housingId);
+        setHousing(housing);
+      });
+  }, [setHousing, housingId]);
+
+  if (housing === null) {
+    return <div></div>;
+  }
+
+  let collapseNames = ["Description", "Equipements"];
+  let collapseTexts = [[housing.description], housing.equipments];
 
   return (
     <React.Fragment>
@@ -26,19 +39,19 @@ const Housing = () => {
         <div className="housing_details">
           <div className="title_host">
             <div className="title">
-              <h1>Cosy loft on the canal - {id} </h1>
-              <p>Paris, ile-de-fraance</p>
+              <h1>{housing.title}</h1>
+              <p>{housing.location}</p>
             </div>
             <div className="host">
-              <p>Alexandre Dumas</p>
-              <img src="" alt="" />
+              <p>{housing.host.name}</p>
+              <img src={housing.host.picture} alt={housing.host.name} />
             </div>
           </div>
           <div className="tag_rate">
             <div className="tag">
-              <button>Cosy</button>
-              <button>Canal</button>
-              <button>Paris 10 test test test test test</button>
+              {housing.tags.map((tag) => (
+                <button>{tag}</button>
+              ))}
             </div>
             <div className="rate">
               <FaRegStar />
