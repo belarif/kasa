@@ -24,8 +24,9 @@ const Apropos = () => {
       <Header />
       <Banner src={aporposBanner} alt="bannière à propos"></Banner>
       <main className="main_aPropos">
-        {aproposData.map((aPropos) => (
+        {aproposData.map((aPropos, index) => (
           <Collapse
+            key={index}
             collapseName={aPropos.collapseName}
             collapseText={aPropos.collapseText}
           />

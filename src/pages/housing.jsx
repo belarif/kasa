@@ -49,8 +49,8 @@ const Housing = () => {
           </div>
           <div className="tag_rate">
             <div className="tag">
-              {housing.tags.map((tag) => (
-                <button>{tag}</button>
+              {housing.tags.map((tag, index) => (
+                <button key={index}>{tag}</button>
               ))}
             </div>
             <div className="rate">
@@ -63,7 +63,7 @@ const Housing = () => {
           </div>
           <div className="details">
             {collapseNames.map((collapseName, index) => (
-              <div className="name_text">
+              <div key={index} className="name_text">
                 <Collapse
                   collapseName={collapseName}
                   collapseText={collapseTexts[index]}

@@ -14,8 +14,8 @@ const Collapse = ({ collapseName, collapseText }) => {
         </span>
       </button>
       <ul className="collapse_text" style={{ display: "block" }}>
-        {collapseText.map((text) => (
-          <li>{text}</li>
+        {collapseText.map((text, index) => (
+          <li key={index}>{text}</li>
         ))}
       </ul>
     </div>
@@ -28,8 +28,8 @@ const Collapse = ({ collapseName, collapseText }) => {
         </span>
       </button>
       <ul className="collapse_text" style={{ display: "none" }}>
-        {collapseText.map((text) => (
-          <li>{text}</li>
+        {collapseText.map((text, index) => (
+          <li key={index}>{text}</li>
         ))}
       </ul>
     </div>
