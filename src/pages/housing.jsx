@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import homeBanner from "../assets/home_banner.png";
 import Collapse from "../components/Collapse";
-import { FaRegStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 
 const Housing = () => {
@@ -54,11 +54,21 @@ const Housing = () => {
               ))}
             </div>
             <div className="rate">
-              <FaRegStar />
-              <FaRegStar />
-              <FaRegStar />
-              <FaRegStar />
-              <FaRegStar />
+              <FaStar
+                style={{ width: "30px", height: "30px", color: "#ff6060" }}
+              />
+              <FaStar
+                style={{ width: "30px", height: "30px", color: "#e3e3e3" }}
+              />
+              <FaStar
+                style={{ width: "30px", height: "30px", color: "#e3e3e3" }}
+              />
+              <FaStar
+                style={{ width: "30px", height: "30px", color: "#e3e3e3" }}
+              />
+              <FaStar
+                style={{ width: "30px", height: "30px", color: "#e3e3e3" }}
+              />
             </div>
           </div>
           <div className="details">

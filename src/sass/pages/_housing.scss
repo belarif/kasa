@@ -45,6 +45,7 @@
   .tag_rate {
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 
     button {
       margin-right: 10px;
@@ -56,6 +57,12 @@
       background-color: $orange;
       color: $white;
       font-size: 0.9rem;
+    }
+
+    .rate {
+      display: flex;
+      justify-content: space-between;
+      width: 180px;
     }
   }
 
