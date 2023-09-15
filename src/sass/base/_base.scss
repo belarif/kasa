@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+
+  #root {
+    margin: auto;
+    width: 1240px;
+  }
+
+  p,
+  a,
+  li {
+    font-size: 1.3rem;
+  }
+
+  li {
+    display: block;
+  }
+}
