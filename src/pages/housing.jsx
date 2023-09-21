@@ -3,7 +3,6 @@ import "../sass/main.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
-import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 
 const Housing = () => {
@@ -55,7 +54,7 @@ const Housing = () => {
                 );
               }}
             >
-              <FaChevronLeft />
+              <span>&#10094;</span>
             </button>
             <button
               className="next"
@@ -65,7 +64,7 @@ const Housing = () => {
                 );
               }}
             >
-              <FaChevronRight />
+              &#10095;
             </button>
           </div>
           <br />
@@ -88,21 +87,11 @@ const Housing = () => {
               ))}
             </div>
             <div className="rate">
-              <FaStar
-                style={{ width: "30px", height: "30px", color: "#ff6060" }}
-              />
-              <FaStar
-                style={{ width: "30px", height: "30px", color: "#e3e3e3" }}
-              />
-              <FaStar
-                style={{ width: "30px", height: "30px", color: "#e3e3e3" }}
-              />
-              <FaStar
-                style={{ width: "30px", height: "30px", color: "#e3e3e3" }}
-              />
-              <FaStar
-                style={{ width: "30px", height: "30px", color: "#e3e3e3" }}
-              />
+              <i style={{ fontSize: "48px", color: "#ff6060" }}>&#128970;</i>
+              <i style={{ fontSize: "48px", color: "#ff6060" }}>&#128970;</i>
+              <i style={{ fontSize: "48px", color: "#e3e3e3" }}>&#128970;</i>
+              <i style={{ fontSize: "48px", color: "#e3e3e3" }}>&#128970;</i>
+              <i style={{ fontSize: "48px", color: "#e3e3e3" }}>&#128970;</i>
             </div>
           </div>
           <div className="details">

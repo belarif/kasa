@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const Collapse = ({ collapseName, collapseText }) => {
   let [open, setOpen] = useState(false);
@@ -9,9 +8,7 @@ const Collapse = ({ collapseName, collapseText }) => {
     <div className="collapse">
       <button className="collapse_name" onClick={() => setOpen(false)}>
         {collapseName}
-        <span className="fa-angle-down">
-          <FaAngleUp />
-        </span>
+        <span className="up-arrow">&#8963;</span>
       </button>
       <ul className="collapse_text" style={{ display: "block" }}>
         {collapseText.map((text, index) => (
@@ -23,9 +20,7 @@ const Collapse = ({ collapseName, collapseText }) => {
     <div className="collapse">
       <button className="collapse_name" onClick={() => setOpen(true)}>
         {collapseName}
-        <span className="fa-angle-down">
-          <FaAngleDown />
-        </span>
+        <span className="down-arrow">&#8964;</span>
       </button>
       <ul className="collapse_text" style={{ display: "none" }}>
         {collapseText.map((text, index) => (

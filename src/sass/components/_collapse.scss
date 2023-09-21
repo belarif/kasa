@@ -16,7 +16,18 @@
     color: $white;
     background-color: $orange;
 
-    .fa-angle-down {
+    .down-arrow,
+    .up-arrow {
+      position: absolute;
+
+      right: 18px;
+    }
+
+    .down-arrow {
+      top: 0;
+    }
+
+    .up-arrow {
       position: absolute;
       top: 10px;
       right: 18px;
