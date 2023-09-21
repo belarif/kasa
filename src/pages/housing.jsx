@@ -9,6 +9,9 @@ import { useParams } from "react-router-dom";
 const Housing = () => {
   const { housingId } = useParams();
   const [housing, setHousing] = useState(null);
+  const [index, setIndex] = useState(1);
+  const [n, setN] = useState(1);
+  let slides = document.querySelectorAll(".mySlides");
 
   useEffect(() => {
     fetch("../data/housings.json")
@@ -21,39 +24,40 @@ const Housing = () => {
       });
   }, [setHousing, housingId]);
 
+  useEffect(() => {
+    function showSlides() {
+      // if (n > slides.length) {
+      //   setIndex(1);
+      // }
+
+      // if (n < 0) {
+      //   setIndex(slides.length);
+      // }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      if (slides.length > 0) {
+        slides[index - 1].style.display = "block";
+      }
+
+      // if (index <= slides.length) {
+      //   setIndex(1);
+      // }
+      console.log("index=" + index);
+      console.log("n=" + n);
+      console.log("slides=" + slides.length);
+    }
+    showSlides();
+  }, [index, n, slides]);
+
   if (housing === null) {
     return <div></div>;
   }
 
   let collapseNames = ["Description", "Equipements"];
   let collapseTexts = [[housing.description], housing.equipments];
-
-  let index = 1;
-  showSlides(index);
-
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides((index += n));
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.querySelectorAll(".mySlides");
-
-    if (n > slides.length) {
-      index = 1;
-    }
-    if (n < 1) {
-      index = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-
-    if (slides.length > 0) {
-      slides[index - 1].style.display = "block";
-    }
-  }
 
   return (
     <React.Fragment>
@@ -69,10 +73,25 @@ const Housing = () => {
                 <img src={picture} alt={housing.title} />
               </div>
             ))}
-            <button className="prev" onClick={() => plusSlides(-1)}>
+            <button
+              className="prev"
+              onClick={() => {
+                setN(-1);
+
+                setIndex((index) =>
+                  index <= slides.length ? (index += n) : 5
+                );
+              }}
+            >
               <FaChevronLeft />
             </button>
-            <button className="next" onClick={() => plusSlides(1)}>
+            <button
+              className="next"
+              onClick={() => {
+                setN(+1);
+                setIndex((index) => (index < slides.length ? (index += n) : 1));
+              }}
+            >
               <FaChevronRight />
             </button>
           </div>
