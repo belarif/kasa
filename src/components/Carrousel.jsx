@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const Carrousel = ({ housing }) => {
-  const [index, setIndex] = useState(0);
+  let [index, setIndex] = useState(0);
+
   return (
     <div className="carrousel">
       <div className="slideshow-container">
@@ -40,6 +42,10 @@ const Carrousel = ({ housing }) => {
       </div>
     </div>
   );
+};
+
+Carrousel.propTypes = {
+  housing: PropTypes.object,
 };
 
 export default Carrousel;

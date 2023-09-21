@@ -33,7 +33,6 @@ const Housing = () => {
       <Header />
       <main className="main_housing">
         <Carrousel housing={housing} />
-
         <div className="housing_details">
           <div className="title_host">
             <div className="title">
@@ -59,7 +58,7 @@ const Housing = () => {
               <i style={{ fontSize: "48px", color: "#e3e3e3" }}>&#128970;</i>
             </div>
           </div>
-          <div className="details">
+          <div className="collapses">
             {collapseNames.map((collapseName, collapseIndex) => (
               <div key={`collapse_${collapseIndex}`} className="name_text">
                 <Collapse
