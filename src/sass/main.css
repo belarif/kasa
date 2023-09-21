@@ -90,6 +90,61 @@
   color: #ffffff;
 }
 
+.carrousel {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 415px;
+}
+.carrousel img {
+  border-radius: 0 0 20px 20px;
+  height: inherit;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carrousel .slideshow-container {
+  position: relative;
+  height: inherit;
+}
+.carrousel .mySlides {
+  display: none;
+  width: inherit;
+  height: inherit;
+}
+.carrousel .prev,
+.carrousel .next {
+  position: absolute;
+  top: 45%;
+  margin-top: -50px;
+  border: none;
+  padding: 16px;
+  background-color: transparent;
+  width: auto;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 70px;
+  transition: 0.6s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.carrousel .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.carrousel .prev:hover,
+.carrousel .next:hover {
+  background-color: #ff6060;
+}
+.carrousel .numbertext {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 5%;
+  right: 50%;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -170,60 +225,6 @@ footer {
 
 .main_housing {
   margin: 40px 0;
-}
-.main_housing .carrousel {
-  margin-bottom: 50px;
-  width: 100%;
-  height: 415px;
-}
-.main_housing .carrousel img {
-  border-radius: 0 0 20px 20px;
-  height: inherit;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.main_housing .carrousel .slideshow-container {
-  position: relative;
-  height: inherit;
-}
-.main_housing .carrousel .mySlides {
-  display: none;
-  width: inherit;
-  height: inherit;
-}
-.main_housing .carrousel .prev,
-.main_housing .carrousel .next {
-  position: absolute;
-  top: 45%;
-  margin-top: -50px;
-  border: none;
-  padding: 16px;
-  background-color: transparent;
-  width: auto;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 70px;
-  transition: 0.6s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.main_housing .carrousel .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.main_housing .carrousel .prev:hover,
-.main_housing .carrousel .next:hover {
-  background-color: #ff6060;
-}
-.main_housing .carrousel .numbertext {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 500;
-  position: absolute;
-  bottom: 5%;
-  right: 50%;
 }
 .main_housing .title_host {
   display: flex;

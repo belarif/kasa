@@ -1,0 +1,58 @@
+.carrousel {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 415px;
+
+  img {
+    border-radius: 0 0 20px 20px;
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .slideshow-container {
+    position: relative;
+    height: inherit;
+  }
+
+  .mySlides {
+    display: none;
+    width: inherit;
+    height: inherit;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 45%;
+    margin-top: -50px;
+    border: none;
+    padding: 16px;
+    background-color: transparent;
+    width: auto;
+    cursor: pointer;
+    color: $white;
+    font-size: 70px;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: $orange;
+  }
+
+  .numbertext {
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+  }
+}

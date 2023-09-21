@@ -3,12 +3,12 @@ import "../sass/main.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
+import Carrousel from "../components/Carrousel";
 import { useParams } from "react-router-dom";
 
 const Housing = () => {
   const { housingId } = useParams();
   const [housing, setHousing] = useState(null);
-  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     fetch("../data/housings.json")
@@ -27,48 +27,13 @@ const Housing = () => {
 
   let collapseNames = ["Description", "Equipements"];
   let collapseTexts = [[housing.description], housing.equipments];
-  console.log(index);
+
   return (
     <React.Fragment>
       <Header />
       <main className="main_housing">
-        <div className="carrousel">
-          <div className="slideshow-container">
-            {housing.pictures.map((picture, pictureIndex) => (
-              <div
-                className="mySlides"
-                key={`picture_${pictureIndex}`}
-                style={pictureIndex === index ? { display: "block" } : {}}
-              >
-                <div className="numbertext">
-                  {index + 1} / {housing.pictures.length}
-                </div>
-                <img src={picture} alt={housing.title} />
-              </div>
-            ))}
-            <button
-              className="prev"
-              onClick={() => {
-                setIndex((index) =>
-                  index > 0 ? (index -= 1) : housing.pictures.length - 1
-                );
-              }}
-            >
-              <span>&#10094;</span>
-            </button>
-            <button
-              className="next"
-              onClick={() => {
-                setIndex((index) =>
-                  index < housing.pictures.length - 1 ? (index += 1) : 0
-                );
-              }}
-            >
-              &#10095;
-            </button>
-          </div>
-          <br />
-        </div>
+        <Carrousel housing={housing} />
+
         <div className="housing_details">
           <div className="title_host">
             <div className="title">
