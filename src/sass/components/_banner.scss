@@ -3,6 +3,10 @@
   width: 100%;
   margin: 40px 0;
 
+  @media (max-width: $mobile) {
+    margin: 20px 0 15px 0;
+  }
+
   h1 {
     position: absolute;
     top: 40%;
@@ -12,7 +16,7 @@
     width: inherit;
     color: $white;
     font-size: 48px;
-    font-weight: 300;
+    font-weight: 500;
 
     @media (max-width: $mobile) {
       top: 25%;
