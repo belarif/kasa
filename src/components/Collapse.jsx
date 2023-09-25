@@ -5,7 +5,7 @@ const Collapse = ({ collapseName, collapseText }) => {
   let [open, setOpen] = useState(false);
 
   return open ? (
-    <div className="collapse">
+    <div className="collapse" style={{ marginBottom: "15px" }}>
       <button className="collapse_name" onClick={() => setOpen(false)}>
         {collapseName}
         <span className="up-arrow">&#8963;</span>

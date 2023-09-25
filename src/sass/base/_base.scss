@@ -9,16 +9,6 @@ body {
     width: auto;
   }
 
-  p,
-  a,
-  li {
-    font-size: 1.3rem;
-
-    @media (max-width: $mobile) {
-      font-size: 1rem;
-    }
-  }
-
   li {
     display: block;
   }
