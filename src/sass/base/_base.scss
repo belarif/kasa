@@ -1,15 +1,12 @@
 body {
-  margin: 0;
+  margin: auto;
+  width: 1240px;
+  max-width: 1440px;
   font-family: "Montserrat", sans-serif;
 
-  #root {
-    margin: auto;
-    width: 1240px;
-
-    @media (max-width: $mobile) {
-      width: auto;
-      margin: 0 12px;
-    }
+  @media (max-width: $mobile) {
+    margin: 0 12px;
+    width: auto;
   }
 
   p,
