@@ -28,16 +28,22 @@
     .up-arrow {
       position: absolute;
       right: 18px;
-    }
+      font-size: 40px;
+      font-weight: 700;
 
-    .down-arrow {
-      top: 0;
+      @media (max-width: $mobile) {
+        right: 10px;
+        font-size: 30px;
+        font-weight: 300;
+      }
     }
 
     .up-arrow {
-      position: absolute;
-      top: 10px;
-      right: 18px;
+      top: -6px;
+
+      @media (max-width: $mobile) {
+        top: -12px;
+      }
     }
   }
 

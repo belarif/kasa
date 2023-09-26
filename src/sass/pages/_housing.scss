@@ -1,66 +1,142 @@
 .main_housing {
   margin: 40px 0;
 
-  .title_host {
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-between;
-    color: $orange;
-
-    .host {
-      display: flex;
-      gap: 10px;
-
-      img {
-        border-radius: 100px;
-        width: 100px;
-        height: 100px;
-        object-fit: contain;
-      }
-
-      p {
-        width: 100px;
-      }
-    }
-
-    .title p {
-      margin-top: 10px;
-    }
-
-    h1 {
-      margin: 0;
-    }
+  @media (max-width: $mobile) {
+    margin: 20px 0 5px 0;
   }
 
-  .tag_rate {
+  .housing_details {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 26px 0 20px 0;
+    color: $orange;
 
-    button {
-      margin-right: 10px;
-      border-radius: 10px;
-      padding: 0 10px 0 10px;
-      border: none;
-      height: 30px;
-      min-width: 115px;
-      background-color: $orange;
-      color: $white;
-      font-size: 0.9rem;
+    @media (max-width: $mobile) {
+      margin: 16px 0 20px 0;
+      flex-direction: column;
     }
 
-    .rate {
+    .title_tag {
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+
+      @media (max-width: $mobile) {
+        gap: 12px;
+      }
+
+      .title p {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+
+        @media (max-width: $mobile) {
+          font-size: 14px;
+        }
+      }
+
+      button {
+        margin: 0 10px 5px 0;
+        border-radius: 10px;
+        padding: 0 10px 0 10px;
+        border: none;
+        height: 25px;
+        min-width: 115px;
+        background-color: $orange;
+        color: $white;
+        font-size: 14px;
+
+        @media (max-width: $mobile) {
+          min-width: 84px;
+          height: 18px;
+          font-size: 10px;
+        }
+      }
+
+      h1 {
+        margin: 0 0 10px 0;
+        font-size: 36px;
+        font-weight: 500;
+
+        @media (max-width: $mobile) {
+          width: 100%;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .host_rate {
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: $mobile) {
+        margin-top: 10px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .rate {
+        margin-top: 15px;
+        text-align: right;
+
+        span {
+          font-size: 38px;
+          color: #e3e3e3;
+
+          @media (max-width: $mobile) {
+            font-size: 28px;
+          }
+        }
+
+        @media (max-width: $mobile) {
+          margin-top: 0;
+        }
+      }
+
+      .host {
+        display: flex;
+        gap: 10px;
+
+        img {
+          border-radius: 100px;
+          width: 64px;
+          height: 64px;
+          object-fit: contain;
+
+          @media (max-width: $mobile) {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+
+          @media (max-width: $mobile) {
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 
   .collapses {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
+    gap: 60px;
 
-    .name_text {
-      width: 582px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .collapse_housing {
+      width: 100%;
     }
   }
 }

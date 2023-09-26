@@ -8,7 +8,7 @@ const Collapse = ({ collapseName, collapseText }) => {
     <div className="collapse" style={{ marginBottom: "15px" }}>
       <button className="collapse_name" onClick={() => setOpen(false)}>
         {collapseName}
-        <span className="up-arrow">&#8963;</span>
+        <span className="up-arrow">&#8964;</span>
       </button>
       <ul className="collapse_text" style={{ display: "block" }}>
         {collapseText.map((text, index) => (
@@ -20,7 +20,7 @@ const Collapse = ({ collapseName, collapseText }) => {
     <div className="collapse">
       <button className="collapse_name" onClick={() => setOpen(true)}>
         {collapseName}
-        <span className="down-arrow">&#8964;</span>
+        <span className="down-arrow">&#8963;</span>
       </button>
       <ul className="collapse_text" style={{ display: "none" }}>
         {collapseText.map((text, index) => (
