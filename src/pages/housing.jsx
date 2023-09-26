@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../sass/main.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -9,6 +9,9 @@ import { useParams } from "react-router-dom";
 const Housing = () => {
   const { housingId } = useParams();
   const [housing, setHousing] = useState(null);
+  const ref = useRef([]);
+
+  const pushRef = (el) => ref.current.push(el);
 
   useEffect(() => {
     fetch("../data/housings.json")
@@ -20,6 +23,10 @@ const Housing = () => {
         setHousing(housing);
       });
   }, [setHousing, housingId]);
+
+  useEffect(() => {
+    if (ref.current) console.log(ref.current);
+  }, [ref]);
 
   if (housing === null) {
     return <div></div>;
@@ -34,40 +41,40 @@ const Housing = () => {
       <main className="main_housing">
         <Carrousel housing={housing} />
         <div className="housing_details">
-          <div className="title_host">
+          <div className="title_tag">
             <div className="title">
               <h1>{housing.title}</h1>
               <p>{housing.location}</p>
             </div>
-            <div className="host">
-              <p>{housing.host.name}</p>
-              <img src={housing.host.picture} alt={housing.host.name} />
-            </div>
-          </div>
-          <div className="tag_rate">
             <div className="tag">
               {housing.tags.map((tag, tagIndex) => (
                 <button key={`tag_${tagIndex}`}>{tag}</button>
               ))}
             </div>
+          </div>
+          <div className="host_rate">
+            <div className="host">
+              <p>{housing.host.name}</p>
+              <img src={housing.host.picture} alt={housing.host.name} />
+            </div>
             <div className="rate">
-              <i style={{ fontSize: "48px", color: "#ff6060" }}>&#128970;</i>
-              <i style={{ fontSize: "48px", color: "#ff6060" }}>&#128970;</i>
-              <i style={{ fontSize: "48px", color: "#e3e3e3" }}>&#128970;</i>
-              <i style={{ fontSize: "48px", color: "#e3e3e3" }}>&#128970;</i>
-              <i style={{ fontSize: "48px", color: "#e3e3e3" }}>&#128970;</i>
+              <span ref={pushRef}>&#128970;</span>
+              <span ref={pushRef}>&#128970;</span>
+              <span ref={pushRef}>&#128970;</span>
+              <span ref={pushRef}>&#128970;</span>
+              <span ref={pushRef}>&#128970;</span>
             </div>
           </div>
-          <div className="collapses">
-            {collapseNames.map((collapseName, collapseIndex) => (
-              <div key={`collapse_${collapseIndex}`} className="name_text">
-                <Collapse
-                  collapseName={collapseName}
-                  collapseText={collapseTexts[collapseIndex]}
-                />
-              </div>
-            ))}
-          </div>
+        </div>
+        <div className="collapses">
+          {collapseNames.map((collapseName, collapseIndex) => (
+            <div key={`collapse_${collapseIndex}`} className="collapse_housing">
+              <Collapse
+                collapseName={collapseName}
+                collapseText={collapseTexts[collapseIndex]}
+              />
+            </div>
+          ))}
         </div>
       </main>
       <Footer />

@@ -80,7 +80,7 @@
       }
 
       .rate {
-        margin-top: 15px;
+        margin-top: 10px;
         text-align: right;
 
         span {
@@ -114,6 +114,8 @@
         }
 
         p {
+          margin-top: 10px;
+          text-align: right;
           font-size: 18px;
 
           @media (max-width: $mobile) {
