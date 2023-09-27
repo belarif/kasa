@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../sass/main.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import homeBanner from "../assets/home_banner.png";
 import Collapse from "../components/Collapse";
-import { FaRegStar } from "react-icons/fa";
+import Carrousel from "../components/Carrousel";
+import Rating from "../components/Rating";
 import { useParams } from "react-router-dom";
 
 const Housing = () => {
@@ -33,44 +33,36 @@ const Housing = () => {
     <React.Fragment>
       <Header />
       <main className="main_housing">
-        <div className="carrousel">
-          <img src={homeBanner} alt="carrousel" />
-        </div>
+        <Carrousel housing={housing} />
         <div className="housing_details">
-          <div className="title_host">
+          <div className="title_tag">
             <div className="title">
               <h1>{housing.title}</h1>
               <p>{housing.location}</p>
             </div>
+            <div className="tag">
+              {housing.tags.map((tag, tagIndex) => (
+                <button key={`tag_${tagIndex}`}>{tag}</button>
+              ))}
+            </div>
+          </div>
+          <div className="host_rate">
             <div className="host">
               <p>{housing.host.name}</p>
               <img src={housing.host.picture} alt={housing.host.name} />
             </div>
+            <Rating housing={housing} />
           </div>
-          <div className="tag_rate">
-            <div className="tag">
-              {housing.tags.map((tag, index) => (
-                <button key={index}>{tag}</button>
-              ))}
+        </div>
+        <div className="collapses">
+          {collapseNames.map((collapseName, collapseIndex) => (
+            <div key={`collapse_${collapseIndex}`} className="collapse_housing">
+              <Collapse
+                collapseName={collapseName}
+                collapseText={collapseTexts[collapseIndex]}
+              />
             </div>
-            <div className="rate">
-              <FaRegStar />
-              <FaRegStar />
-              <FaRegStar />
-              <FaRegStar />
-              <FaRegStar />
-            </div>
-          </div>
-          <div className="details">
-            {collapseNames.map((collapseName, index) => (
-              <div key={index} className="name_text">
-                <Collapse
-                  collapseName={collapseName}
-                  collapseText={collapseTexts[index]}
-                />
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </main>
       <Footer />

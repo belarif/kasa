@@ -2,23 +2,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  margin-top: 15px;
 
   ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
+    width: 18%;
+
+    @media (max-width: $mobile) {
+      justify-content: end;
+      gap: 20px;
+      width: auto;
+    }
 
     li {
       display: block;
-      padding: 42px 0;
 
       a {
-        border-top: 3px solid transparent;
-        padding: 40px 30px;
         text-decoration: none;
         color: $orange;
+        font-size: 24px;
+
+        @media (max-width: $mobile) {
+          font-size: 12px;
+        }
       }
+    }
+  }
+
+  img {
+    @media (max-width: $mobile) {
+      width: 125px;
+      height: 36px;
     }
   }
 }

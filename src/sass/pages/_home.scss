@@ -3,4 +3,9 @@
   border-radius: 20px;
   padding: 30px;
   background-color: $gray;
+
+  @media (max-width: 767px) {
+    padding: 0;
+    background-color: transparent;
+  }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "../sass/main.scss";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 const Error = () => {
@@ -12,6 +13,7 @@ const Error = () => {
         <p>Oups! la page que vous demandez n'existe pas.</p>
         <Link to="/">Retour à la page d'accueil</Link>
       </main>
+      <Footer />
     </React.Fragment>
   );
 };
