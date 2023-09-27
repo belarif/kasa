@@ -1,0 +1,17 @@
+.rate {
+  margin-top: 10px;
+  text-align: right;
+
+  span {
+    font-size: 38px;
+    color: #e3e3e3;
+
+    @media (max-width: $mobile) {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 0;
+  }
+}

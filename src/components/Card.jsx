@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Card = ({ housings }) => {
   return (
@@ -18,6 +19,10 @@ const Card = ({ housings }) => {
         ))}
     </ul>
   );
+};
+
+Card.prototype = {
+  housings: PropTypes.array,
 };
 
 export default Card;

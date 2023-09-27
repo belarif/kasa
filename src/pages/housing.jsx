@@ -4,12 +4,12 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
 import Carrousel from "../components/Carrousel";
+import Rating from "../components/Rating";
 import { useParams } from "react-router-dom";
 
 const Housing = () => {
   const { housingId } = useParams();
   const [housing, setHousing] = useState(null);
-  
 
   useEffect(() => {
     fetch("../data/housings.json")
@@ -28,6 +28,7 @@ const Housing = () => {
 
   let collapseNames = ["Description", "Equipements"];
   let collapseTexts = [[housing.description], housing.equipments];
+
   return (
     <React.Fragment>
       <Header />
@@ -50,9 +51,7 @@ const Housing = () => {
               <p>{housing.host.name}</p>
               <img src={housing.host.picture} alt={housing.host.name} />
             </div>
-            <div className="rate">
-                {[1,2,3,4,5].map((rate) => <span key={`rate_${rate}`} style={parseInt(housing.rating, 10) >= rate ? {color: 'red'} : {}}>&#128970;</span>)}
-            </div>
+            <Rating housing={housing} />
           </div>
         </div>
         <div className="collapses">
