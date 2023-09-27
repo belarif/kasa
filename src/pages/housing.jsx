@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "../sass/main.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -9,9 +9,7 @@ import { useParams } from "react-router-dom";
 const Housing = () => {
   const { housingId } = useParams();
   const [housing, setHousing] = useState(null);
-  const ref = useRef([]);
-
-  const pushRef = (el) => ref.current.push(el);
+  
 
   useEffect(() => {
     fetch("../data/housings.json")
@@ -24,17 +22,12 @@ const Housing = () => {
       });
   }, [setHousing, housingId]);
 
-  useEffect(() => {
-    if (ref.current) console.log(ref.current);
-  }, [ref]);
-
   if (housing === null) {
     return <div></div>;
   }
 
   let collapseNames = ["Description", "Equipements"];
   let collapseTexts = [[housing.description], housing.equipments];
-
   return (
     <React.Fragment>
       <Header />
@@ -58,11 +51,7 @@ const Housing = () => {
               <img src={housing.host.picture} alt={housing.host.name} />
             </div>
             <div className="rate">
-              <span ref={pushRef}>&#128970;</span>
-              <span ref={pushRef}>&#128970;</span>
-              <span ref={pushRef}>&#128970;</span>
-              <span ref={pushRef}>&#128970;</span>
-              <span ref={pushRef}>&#128970;</span>
+                {[1,2,3,4,5].map((rate) => <span key={`rate_${rate}`} style={parseInt(housing.rating, 10) >= rate ? {color: 'red'} : {}}>&#128970;</span>)}
             </div>
           </div>
         </div>
