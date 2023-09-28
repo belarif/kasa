@@ -25,6 +25,10 @@
           height: auto;
           min-height: 255px;
         }
+
+        @media (max-width: $tablet) {
+          object-fit: cover;
+        }
       }
 
       h2 {
