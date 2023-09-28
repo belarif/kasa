@@ -17,7 +17,7 @@ const Rating = ({ housing }) => {
   );
 };
 
-Rating.prototype = {
+Rating.propTypes = {
   housing: PropTypes.object,
 };
 

@@ -21,7 +21,7 @@ const Card = ({ housings }) => {
   );
 };
 
-Card.prototype = {
+Card.propTypes = {
   housings: PropTypes.array,
 };
 

@@ -13,13 +13,18 @@ const Carrousel = ({ housing }) => {
             key={`picture_${pictureIndex}`}
             style={pictureIndex === index ? { display: "block" } : {}}
           >
-            <div className="numbertext">
+            <div
+              className="numbertext"
+              style={housing.pictures.length === 1 ? { display: "none" } : {}}
+            >
               {index + 1} / {housing.pictures.length}
             </div>
             <img src={picture} alt={housing.title} />
           </div>
         ))}
+
         <button
+          style={housing.pictures.length === 1 ? { display: "none" } : {}}
           className="prev"
           onClick={() => {
             setIndex((index) =>
@@ -30,6 +35,7 @@ const Carrousel = ({ housing }) => {
           <span>&#10094;</span>
         </button>
         <button
+          style={housing.pictures.length === 1 ? { display: "none" } : {}}
           className="next"
           onClick={() => {
             setIndex((index) =>

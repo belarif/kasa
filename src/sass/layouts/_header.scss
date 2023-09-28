@@ -8,13 +8,12 @@
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 60px;
     margin: 0;
     padding: 0;
-    width: 18%;
 
     @media (max-width: $mobile) {
-      justify-content: end;
       gap: 20px;
       width: auto;
     }

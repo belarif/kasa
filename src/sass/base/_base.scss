@@ -1,13 +1,8 @@
 body {
   margin: auto;
-  width: 1240px;
-  max-width: 1440px;
+  padding: 0 12px;
+  max-width: 1400px;
   font-family: "Montserrat", sans-serif;
-
-  @media (max-width: $mobile) {
-    margin: 0 12px;
-    width: auto;
-  }
 
   li {
     display: block;
