@@ -1,7 +1,10 @@
 .modal {
+  position: absolute;
+  top: 6%;
   z-index: 2;
   display: flex;
   justify-content: center;
+  width: 100%;
 
   .modal-content {
     padding: 20px;
