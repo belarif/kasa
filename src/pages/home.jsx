@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../sass/main.scss";
+import Modal from "../components/Modal";
 import homeBanner from "../assets/home_banner.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -21,6 +22,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+      <Modal />
       <Header />
       <Banner
         src={homeBanner}

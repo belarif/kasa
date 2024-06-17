@@ -1,0 +1,30 @@
+.modal {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+
+  .modal-content {
+    padding: 20px;
+    width: 600px;
+    height: auto;
+    background-color: $beige;
+
+    .modal-btn {
+      text-align: right;
+
+      button {
+        width: auto;
+      }
+    }
+
+    .tech-infos {
+      text-align: center;
+
+      li {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $orange;
+      }
+    }
+  }
+}
