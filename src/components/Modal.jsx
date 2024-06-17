@@ -20,15 +20,16 @@ const Modal = () => {
           <div class="tech-infos">
             <h2>Pour cette réalisation, j'ai utilisé :</h2>
             <ul>
-              <li>html5</li>
-              <li>css3</li>
-              <li>sass</li>
-              <li>figma</li>
+              <li>Html5</li>
+              <li>Css3</li>
+              <li>Javacript</li>
+              <li>Sass</li>
+              <li>Figma</li>
               <li>React</li>
               <li>React-router-dom</li>
-              <li>la sémantique</li>
-              <li>responsive design</li>
-              <li>modèle des boites pour le code CSS</li>
+              <li>Sémantique html</li>
+              <li>Responsive design</li>
+              <li>Modèle des boites pour le code CSS</li>
             </ul>
           </div>
         </div>
