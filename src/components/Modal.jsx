@@ -22,12 +22,13 @@ const Modal = () => {
             <ul>
               <li>Html5</li>
               <li>Css3</li>
-              <li>Javacript</li>
               <li>Sass</li>
               <li>Figma</li>
               <li>React</li>
-              <li>React-router-dom</li>
+              <li>Javacript</li>
+              <li>Git & GitHub</li>
               <li>Sémantique html</li>
+              <li>React-router-dom</li>
               <li>Responsive design</li>
               <li>Modèle des boites pour le code CSS</li>
             </ul>
